@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include ('partials.header')
+    @include ('partials._header')
   </head>
 
   <body>
     @include ('partials._nav')
+
+    <br>
+    <br>
+    <br>
     
     <div class="container">
       <div class="row">
-      @include('partials._Messages')
       
-      @yield ('content')    
+      
+      @yield ('content')   
+      @include('partials._comment')
+      
+        
+      @include('partials._category')
+      
     
-      @include ('partials._footer')
+      
     </div><!--end of row-->
 
-    </div> <!--end of container-->
 
+    </div> <!--end of container-->
+    @include ('partials._footer')
     @include ('partials._javascript')
 
   </body>
